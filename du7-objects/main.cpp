@@ -22,7 +22,7 @@ public:
         std::cout << "B(char)" << x << std::endl;
     }
 
-    B(B &b) {
+    B(const B &b) {
         x = b.x;
         std::cout << "B(B &b)" << x << std::endl;
     }
@@ -76,8 +76,7 @@ int main() {
     delete(&rB);
 //Otazka 2: Konstruktor probehne na zacatku a destruktor na konci programu
 //Otazka 3:
-//    B pole_b[]={ 'x', 'y' };
-// Program selže,
+    B pole_b[]={ 'x', 'y' };
     return 0;
 }
 
