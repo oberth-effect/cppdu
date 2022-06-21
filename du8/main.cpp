@@ -34,7 +34,7 @@ public:
         end = End;
     }  // konstruktor se dvěma parametry (koncovými body), zapamatuje si je
     friend ostream &operator<<(ostream &o, line &l); // je třeba dodělat obdobně jako u point
-    friend class on_line;
+    friend class on_line;  
     bool at(point &p) { return (begin.x <= p.x && p.x <= end.x); } // Leží bod p na nebo mezi begin a end?Vrátí ano/ne.
 };      // Nezapomenout středník, jinak chybové hlášení pak bývá matoucí.
 

@@ -26,7 +26,7 @@ void measure(volatile DATA_TYPE *p, const int n_elements, const int rep, double 
     }
     end = clock();
 //    save_sum = sum;
-    throughput = double(n_elements * sizeof(DATA_TYPE) * rep) / double(end - start);
+    throughput = double(n_elements * sizeof(DATA_TYPE) * rep) /(end - start)*CLOCKS_PER_SEC;
 
 }
 
